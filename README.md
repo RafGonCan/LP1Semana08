@@ -9,4 +9,8 @@ classDiagram
         + void Fight ()
     }
 
+    class Weapon {
+        # float power
+        + Weapon (float weapon) 
+    }
 
