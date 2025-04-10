@@ -35,3 +35,13 @@ classDiagram
         + void AttackWithSword ()
     }
 
+    class Program {
+        - static void Main ()
+    }
+
+Program <|-- Character
+Character <|-- Player
+Character <|-- Enemy
+Character o--> Weapon
+Weapon <|-- Gun
+Weapon <|-- Sword
