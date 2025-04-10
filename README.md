@@ -24,3 +24,8 @@ classDiagram
         + Gun (float power, int ammo)
         + void FireGun ()
     }
+
+    class Player {
+        + Player (string Name)
+    }
+
