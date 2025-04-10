@@ -6,7 +6,8 @@ namespace GameUnit
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP1!");
+            Unit unit = new Unit(5, 100);
+            unit.Move();
         }
     }
 }
