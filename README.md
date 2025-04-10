@@ -29,3 +29,9 @@ classDiagram
         + Player (string Name)
     }
 
+    class Sword {
+        - float BladeLenght
+        + Sword (float power, float bladeLenght)
+        + void AttackWithSword ()
+    }
+
