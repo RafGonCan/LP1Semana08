@@ -19,3 +19,8 @@ classDiagram
         + Enemy (string Name)        
     }
 
+    class Gun {
+        - int Ammo
+        + Gun (float power, int ammo)
+        + void FireGun ()
+    }
