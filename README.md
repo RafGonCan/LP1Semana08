@@ -14,3 +14,8 @@ classDiagram
         + Weapon (float weapon) 
     }
 
+
+    class Enemy {
+        + Enemy (string Name)        
+    }
+
