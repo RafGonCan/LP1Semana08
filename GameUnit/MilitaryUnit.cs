@@ -5,7 +5,7 @@ namespace GameUnit
     public class MilitaryUnit : Unit // Heranca!!
     {
         public int AttackPower { get; }
-        protected int XP { get; private set; }
+        public int XP { get; private set; }
 
         public MilitaryUnit(int mov, int health, int attackPower) : base(mov, health)
         {                                                        
@@ -29,12 +29,12 @@ namespace GameUnit
 
         public void Attack (Unit u)
         {
-            if ( u is MilitaryUnit)
+            if (u is MilitaryUnit enemy)
             {
-                MilitaryUnit enemy = (MilitaryUnit)u;
                 enemy.Health -= AttackPower;
                 XP += 10;
-                System.Console.WriteLine($"Attacked {enemy.GetType().Name} for", 
+                System.Console.WriteLine($"Attacked {enemy.GetType().Name} for",
+
                                         "{AttackPower} damage. Gained 10 XP.");
             }
         }
