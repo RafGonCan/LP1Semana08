@@ -7,13 +7,21 @@ namespace GameUnit
     {
         private static void Main(string[] args)
         {
-            MilitaryUnit soldier = new MilitaryUnit(3, 10, 5);
-            SettlerUnit settler = new SettlerUnit(1, 3);
+            Unit[] units = new Unit[]
+            {
+                new MilitaryUnit(3, 10, 2),
+                new MilitaryUnit(4, 5, 3),
+                new SettlerUnit(1, 3), 
+            };
 
-            soldier.Move();
-            settler.Move();
-            Console.WriteLine($"Soldier Health: {soldier.Health}");
-            Console.WriteLine($"Settler Health: {settler.Health}");
+            (units[0] as MilitaryUnit).Attack(units[1]);
+            (units[0] as MilitaryUnit).Attack(units[2]);
+            (units[1] as SettlerUnit).Move();
+
+            foreach (Unit u in units)
+            {
+                Console.WriteLine(u);
+            }
         }
     }
 }
